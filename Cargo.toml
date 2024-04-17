@@ -1,0 +1,19 @@
+[package]
+name = "validation_service"
+version = "0.1.0"
+edition = "2021"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[dependencies]
+tokio = {version = "1.37.0", features = ["full"]}
+tonic = {version = "0.11.0", features = ["tls"]}
+anyhow = "1.0.82"
+axum = "0.7.5"
+serde = {version = "1.0.198", features = ["derive"]}
+serde_json = {version = "1.0.116", features = ["raw_value"]}
+aruna-rust-api = "2.0.0-beta.12"
+dotenvy = "0.15.7"
+diesel-ulid = "0.3.1"
+reqwest = { version = "0.12.3" , features = ["stream"]}
+regex = "1.10.4"
