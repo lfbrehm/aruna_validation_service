@@ -44,7 +44,7 @@ async fn validator(request: Request) -> Result<String> {
         };
 
         dbg!(&file);
-        let fasta_regex = Regex::new(r"^[^\S\n]*>[^\s>].*(?:\n[^\S\n]*[AGTC]+)+$")?;
+        let fasta_regex = Regex::new(r"^[^\S\n]*>[^\s>].*(?:\n[^\S\n]*[AGTC\n]+)+$")?;
         let mut hooks_client = HooksServiceClient::connect(dotenvy::var("ARUNA_ADDRESS")?)
             .await
             .unwrap();
